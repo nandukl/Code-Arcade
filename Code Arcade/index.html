@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ─── Primary SEO ─── -->
+  <title>Code Arcade — Turning Your Vision Into Digital Reality</title>
+  <meta name="description" content="Code Arcade builds modern websites, high-performance web applications, mobile apps, and academic engineering projects from concept to deployment. 50+ projects delivered." />
+  <meta name="keywords" content="Code Arcade, Web Development, Mobile Applications, React, Node.js, Next.js, Firebase, Academic Projects, Tamil Nadu, Student Projects, Business Software" />
+  <meta name="author" content="Code Arcade" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://codearcade20.vercel.app/" />
+
+  <!-- ─── Open Graph / Facebook ─── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://codearcade20.vercel.app/" />
+  <meta property="og:title" content="Code Arcade — Turning Your Vision Into Digital Reality" />
+  <meta property="og:description" content="We build modern websites, powerful applications, and academic engineering projects. 50+ projects delivered. Ideas • Code • Impact." />
+  <meta property="og:image" content="https://codearcade20.vercel.app/assets/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Code Arcade - Turning Your Vision Into Digital Reality" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="Code Arcade" />
+
+  <!-- ─── Twitter Card ─── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://codearcade20.vercel.app/" />
+  <meta name="twitter:title" content="Code Arcade — Turning Your Vision Into Digital Reality" />
+  <meta name="twitter:description" content="We build modern websites, powerful applications, and academic projects. 50+ delivered. Contact: codearcade20@gmail.com" />
+  <meta name="twitter:image" content="https://codearcade20.vercel.app/assets/images/og-image.jpg" />
+
+  <!-- ─── PWA / Theme ─── -->
+  <meta name="theme-color" content="#07090e" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Code Arcade" />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- ─── Favicon (inline SVG → works everywhere without extra files) ─── -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2307090e'/><text x='50%' y='65%' font-family='sans-serif' font-weight='900' font-size='48' fill='%2338bdf8' text-anchor='middle'>CA</text></svg>" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+
+  <!-- ─── JSON-LD Structured Data ─── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://codearcade20.vercel.app/#org",
+        "name": "Code Arcade",
+        "url": "https://codearcade20.vercel.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://codearcade20.vercel.app/assets/icons/icon-512.png"
+        },
+        "description": "Code Arcade builds modern websites, mobile applications, web applications, and academic engineering projects.",
+        "email": "codearcade20@gmail.com",
+        "sameAs": [
+          "https://github.com/codearcade20",
+          "https://instagram.com/codearcade",
+          "https://youtube.com/@codearcade"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://codearcade20.vercel.app/#website",
+        "url": "https://codearcade20.vercel.app/",
+        "name": "Code Arcade",
+        "description": "Turning Your Vision Into Digital Reality",
+        "publisher": { "@id": "https://codearcade20.vercel.app/#org" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://codearcade20.vercel.app/#webpage",
+        "url": "https://codearcade20.vercel.app/",
+        "name": "Code Arcade — Turning Your Vision Into Digital Reality",
+        "isPartOf": { "@id": "https://codearcade20.vercel.app/#website" },
+        "about": { "@id": "https://codearcade20.vercel.app/#org" },
+        "description": "50+ projects delivered. Modern websites, mobile apps, and business applications."
+      }
+    ]
+  }
+  </script>
+
+  <script src="js/boot.js"></script>
+
+  <!-- ─── Resource Hints ─── -->
+  <link rel="preload" as="image" href="assets/images/hero-bg.webp" type="image/webp" fetchpriority="high" />
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- ─── Google Fonts (display=swap for zero render-block) ─── -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- ─── FontAwesome 6 ─── -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- ─── Stylesheets ─── -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+
+<body>
+  <noscript><p style="padding:.75rem 1rem;text-align:center;background:#111726;color:#94a3b8;font-size:.85rem;">Some animations and forms need JavaScript. You can still reach us at codearcade20@gmail.com.</p></noscript>
+  <!-- ══════════════════════════════════════════
+       SKIP TO MAIN CONTENT (Accessibility)
+  ══════════════════════════════════════════ -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ══════════════════════════════════════════
+       PRELOADER
+  ══════════════════════════════════════════ -->
+  <div id="preloader" role="progressbar" aria-label="Loading Code Arcade" aria-busy="true">
+    <div class="preloader-logo" aria-hidden="true">
+      <div class="brand-emblem" style="width:40px;height:40px;">
+        <span>CA</span>
+      </div>
+      <span>CODE ARCADE</span>
+    </div>
+    <div class="preloader-bar-container" aria-hidden="true">
+      <div class="preloader-bar"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SCROLL PROGRESS INDICATOR
+  ══════════════════════════════════════════ -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress-bar" role="none"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       AMBIENT GLOW (decorative, hidden from a11y tree)
+  ══════════════════════════════════════════ -->
+  <div class="ambient-glow-follower" id="ambient-glow-follower" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container nav-container">
+
+      <a href="#home" class="brand-logo" aria-label="Code Arcade — Return to homepage">
+        <div class="brand-emblem" aria-hidden="true"><span>CA</span></div>
+        <span>CODE ARCADE</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Primary navigation">
+        <a href="#home" class="nav-link active" aria-current="true">Home</a>
+        <a href="#services" class="nav-link" aria-current="false">Services</a>
+        <a href="#projects" class="nav-link" aria-current="false">Projects</a>
+        <a href="#tech" class="nav-link" aria-current="false">Tech Stack</a>
+        <a href="#about" class="nav-link" aria-current="false">About</a>
+        <a href="#contact" class="nav-link" aria-current="false">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-login" id="btn-client-login" aria-label="Client login"
+                aria-haspopup="dialog" aria-controls="login-modal">
+          <i class="fa-regular fa-id-card" aria-hidden="true"></i>
+          <span>Client Login</span>
+          <svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+
+        <button class="mobile-toggle" id="mobile-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-links">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       MAIN CONTENT
+  ══════════════════════════════════════════ -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero-section" id="home" aria-labelledby="hero-heading">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <!-- Glass Partition Brand (decorative) -->
+      <div class="hero-glass-brand" aria-hidden="true">
+        <div class="brand-logo-glow">
+          <div class="brand-emblem" style="width:32px;height:32px;font-size:.9rem;">
+            <span>CA</span>
+          </div>
+          <span>CODE ARCADE</span>
+        </div>
+        <div class="brand-subtext">Build &nbsp;|&nbsp; Deploy &nbsp;|&nbsp; Grow</div>
+      </div>
+
+      <div class="container" style="position:relative;z-index:3;">
+        <div class="hero-content reveal-left is-revealed">
+          <p class="hero-eyebrow" aria-label="Tagline">
+            <span>IDEAS &nbsp;•&nbsp; CODE &nbsp;•&nbsp; IMPACT</span>
+          </p>
+          <h1 class="hero-title" id="hero-heading">
+            Turning Your Vision Into
+            <span class="gradient-reality">Digital Reality</span>
+          </h1>
+          <p class="hero-description">
+            We build modern websites and powerful applications, help businesses grow
+            with technology — and provide end-to-end support, from concept to deployment.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn-primary">
+              <span>Explore Our Work</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="2.5"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <button class="btn-secondary" id="btn-get-quote"
+                    aria-haspopup="dialog" aria-controls="quote-modal">
+              <span>Get a Quote</span>
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="hero-stats" aria-label="Key statistics">
+            <div class="stat-item">
+              <span class="stat-number" data-target="50" data-suffix="+" aria-label="50 plus projects delivered">50+</span>
+              <span class="stat-label">Projects Delivered</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="20" data-suffix="+" aria-label="20 plus happy clients">20+</span>
+              <span class="stat-label">Happy Clients</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="2" data-suffix="+" aria-label="2 plus years of experience">2+</span>
+              <span class="stat-label">Years of Experience</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frosted Glass Service Dock -->
+      <div class="container hero-dock-wrapper">
+        <div class="hero-dock reveal is-revealed" role="list" aria-label="Core services">
+          <a href="#services" class="dock-card" role="listitem">
+            <div class="dock-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="dock-card-content">
+              <h2 class="dock-card-title">Website Development</h2>
+              <p class="dock-card-desc">Modern, responsive and SEO friendly websites for your business.</p>
+            </div>
+            <span class="dock-card-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#services" class="dock-card" role="listitem">
+            <div class="dock-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <div class="dock-card-content">
+              <h2 class="dock-card-title">Mobile Applications</h2>
+              <p class="dock-card-desc">Feature-rich and scalable mobile apps for iOS &amp; Android.</p>
+            </div>
+            <span class="dock-card-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#services" class="dock-card" role="listitem">
+            <div class="dock-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+            <div class="dock-card-content">
+              <h2 class="dock-card-title">Web Applications</h2>
+              <p class="dock-card-desc">Custom web apps built with modern technologies.</p>
+            </div>
+            <span class="dock-card-arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="#services" class="dock-card" role="listitem">
+            <div class="dock-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-gear"></i>
+            </div>
+            <div class="dock-card-content">
+              <h2 class="dock-card-title">Maintenance &amp; Support</h2>
+              <p class="dock-card-desc">Keep your systems running smoothly, always.</p>
+            </div>
+            <span class="dock-card-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider-beam" aria-hidden="true"></div>
+
+    <!-- ═══════════ OUR SERVICES ═══════════ -->
+    <section class="section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="services-section-header reveal">
+          <div>
+            <p class="section-tag">OUR SERVICES</p>
+            <h2 class="section-title" id="services-heading">
+              Solutions That Empower <span class="gradient-reality">Your Business</span>
+            </h2>
+            <p class="section-subtitle">
+              We deliver custom digital solutions tailored to your goals, helping you
+              stay ahead in a fast-changing world.
+            </p>
+          </div>
+          <a href="#contact" class="view-all-link" aria-label="Contact us to view all services">
+            <span>View All Services</span>
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal stagger-1">
+            <div class="service-card-media">
+              <img decoding="async" src="assets/images/service-web-dev.webp"
+                   alt="Developer working in a code editor on a laptop"
+                   width="600" height="375" loading="lazy" />
+            </div>
+            <div class="service-card-body">
+              <div>
+                <h3 class="service-card-title">Website Development</h3>
+                <p class="service-card-desc">Modern, responsive and SEO friendly websites for your business.</p>
+              </div>
+              <div class="service-card-footer">
+                <a href="#contact" class="circle-arrow-btn" aria-label="Enquire about Website Development">
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card reveal stagger-2">
+            <div class="service-card-media">
+              <img decoding="async" src="assets/images/service-mobile.webp"
+                   alt="Hands holding a smartphone with a dark-mode mobile application"
+                   width="600" height="375" loading="lazy" />
+            </div>
+            <div class="service-card-body">
+              <div>
+                <h3 class="service-card-title">Mobile Applications</h3>
+                <p class="service-card-desc">Feature-rich and scalable mobile apps for iOS &amp; Android.</p>
+              </div>
+              <div class="service-card-footer">
+                <a href="#contact" class="circle-arrow-btn" aria-label="Enquire about Mobile Applications">
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card reveal stagger-3">
+            <div class="service-card-media">
+              <img decoding="async" src="assets/images/service-web-app.webp"
+                   alt="A laptop showing a cloud SaaS dashboard interface"
+                   width="600" height="375" loading="lazy" />
+            </div>
+            <div class="service-card-body">
+              <div>
+                <h3 class="service-card-title">Web Applications</h3>
+                <p class="service-card-desc">Custom web apps built with modern technologies.</p>
+              </div>
+              <div class="service-card-footer">
+                <a href="#contact" class="circle-arrow-btn" aria-label="Enquire about Web Applications">
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-card reveal stagger-4">
+            <div class="service-card-media">
+              <img decoding="async" src="assets/images/service-maintenance.webp"
+                   alt="Premium headphones on a clean developer desk"
+                   width="600" height="375" loading="lazy" />
+            </div>
+            <div class="service-card-body">
+              <div>
+                <h3 class="service-card-title">Maintenance &amp; Support</h3>
+                <p class="service-card-desc">Keep your systems running smoothly, always.</p>
+              </div>
+              <div class="service-card-footer">
+                <a href="#contact" class="circle-arrow-btn" aria-label="Enquire about Maintenance and Support">
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box reveal stagger-1">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3>Real-Time Business Apps</h3>
+            <p>End-to-end digital solutions to streamline workflows, automate tracking, and drive rapid revenue growth.</p>
+          </div>
+          <div class="feature-box reveal stagger-2">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3>Academic Excellence &amp; Projects</h3>
+            <p>IEEE-aligned college major &amp; mini projects with thorough documentation and clean, maintainable codebases.</p>
+          </div>
+          <div class="feature-box reveal stagger-3">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Full-Stack &amp; Cloud Architecture</h3>
+            <p>Scalable cloud databases, bulletproof authentication, lightning-fast Next.js APIs, and serverless infrastructure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider-beam" aria-hidden="true"></div>
+
+    <!-- ═══════════ LIVE CODE PLAYGROUND ═══════════ -->
+    <section class="section playground-section" id="playground" aria-labelledby="playground-heading">
+      <div class="container">
+        <div class="reveal" style="text-align:center;max-width:680px;margin:0 auto 3rem auto;">
+          <p class="section-tag">LIVE DEMONSTRATION</p>
+          <h2 class="section-title" id="playground-heading">
+            Test Code Arcade <span class="gradient-reality">In Action</span>
+          </h2>
+          <p class="section-subtitle" style="margin:0 auto;">
+            Experience our high-performance runtime pipeline. Execute the code snippet
+            to simulate a production deployment check.
+          </p>
+        </div>
+
+        <div class="editor-window reveal-zoom" role="region" aria-label="Interactive code editor">
+          <div class="editor-header">
+            <div class="editor-dots" aria-hidden="true">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="editor-title" style="margin-left:.75rem;">
+                <i class="fa-brands fa-js" style="color:#f7df1e;" aria-hidden="true"></i>
+                deployPipeline.js
+              </span>
+            </div>
+            <div class="editor-actions">
+              <button class="btn-run-code" id="btn-run-code" aria-label="Run the code snippet">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span>Run Code</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="editor-body">
+            <div class="code-pane" aria-label="JavaScript code snippet" role="code">
+              <div class="code-line"><span class="line-no" aria-hidden="true">1</span><span class="line-content"><span class="token-comment">// Code Arcade — Project Execution</span></span></div>
+              <div class="code-line"><span class="line-no" aria-hidden="true">2</span><span class="line-content"><span class="token-keyword">const</span> <span class="token-var">project</span> <span class="token-punct">=</span> <span class="token-punct">{</span></span></div>
+              <div class="code-line"><span class="line-no" aria-hidden="true">3</span><span class="line-content">&nbsp;&nbsp;<span class="token-var">name</span><span class="token-punct">:</span> <span class="token-string">"Enterprise Digital Core"</span><span class="token-punct">,</span></span></div>
+              <div class="code-line"><span class="line-no" aria-hidden="true">4</span><span class="line-content">&nbsp;&nbsp;<span class="token-var">client</span><span class="token-punct">:</span> <span class="token-string">"Code Arcade Partner"</span><span class="token-punct">,</span></span></div>
+              <div class="code-line"><span class="line-no" aria-hidden="true">5</span><span class="line-content">&nbsp;&nbsp;<span class="token-var">status</span><span class="token-punct">:</span> <span class="token-string">"Optimized &amp; Live 🚀"</span><span class="token-punct">,</span></span></div>
+              <div class="code-line"><span class="line-no" aria-hidden="true">6</span><span class="line-content">&nbsp;&nbsp;<span class="token-var">stack</span><span class="token-punct">:</span> <span class="token-punct">[</span><span class="token-string">"Next.js"</span><span class="token-punct">,</span> <span class="token-string">"TypeScript"</span><span class="token-punct">,</span> <span class="token-string">"Node.js"</span><span class="token-punct">]</span><span class="token-punct">,</span></span></div>
+              <div class="code-line"><span class="line-no" aria-hidden="true">7</span><span class="line-content">&nbsp;&nbsp;<span class="token-var">metrics</span><span class="token-punct">:</span> <span class="token-punct">{</span> <span class="token-var">uptime</span><span class="token-punct">:</span> <span class="token-string">"99.98%"</span><span class="token-punct">,</span> <span class="token-var">latency</span><span class="token-punct">:</span> <span class="token-string">"24ms"</span> <span class="token-punct">}</span><span class="token-punct">,</span></span></div>
+              <div class="code-line"><span class="line-no" aria-hidden="true">8</span><span class="line-content">&nbsp;&nbsp;<span class="token-function">deploy</span><span class="token-punct">:</span> <span class="token-keyword">function</span><span class="token-punct">()</span> <span class="token-punct">{</span></span></div>
+              <div class="code-line"><span class="line-no" aria-hidden="true">9</span><span class="line-content">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token-keyword">return</span> <span class="token-string">`✅ ${this.name} — ${this.status}`</span><span class="token-punct">;</span></span></div>
+              <div class="code-line"><span class="line-no" aria-hidden="true">10</span><span class="line-content">&nbsp;&nbsp;<span class="token-punct">}</span></span></div>
+              <div class="code-line"><span class="line-no" aria-hidden="true">11</span><span class="line-content"><span class="token-punct">}</span><span class="token-punct">;</span></span></div>
+              <div class="code-line"><span class="line-no" aria-hidden="true">12</span><span class="line-content"><span class="token-var">console</span><span class="token-punct">.</span><span class="token-function">log</span><span class="token-punct">(</span><span class="token-var">project</span><span class="token-punct">.</span><span class="token-function">deploy</span><span class="token-punct">())</span><span class="token-punct">;</span></span></div>
+            </div>
+
+            <div class="console-pane">
+              <div class="console-title">
+                <span>Terminal Output</span>
+                <span style="color:#10b981;" aria-label="Terminal active">● Active</span>
+              </div>
+              <div class="console-output" id="console-output"
+                   aria-live="polite" aria-label="Terminal output">
+                // Press "Run Code" to execute the deployment pipeline…
+              </div>
+              <div class="console-status" id="console-status" aria-live="polite">Ready</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider-beam" aria-hidden="true"></div>
+
+    <!-- ═══════════ PROJECTS ═══════════ -->
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="projects-header reveal">
+          <p class="section-tag">OUR PORTFOLIO</p>
+          <h2 class="section-title" id="projects-heading">
+            Featured Work &amp; <span class="gradient-reality">Demonstrations</span>
+          </h2>
+          <p class="section-subtitle" style="margin:0 auto;">
+            Enterprise business software, college final year major projects, and
+            high-performance digital apps.
+          </p>
+        </div>
+
+        <div class="projects-filter-bar reveal" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">All Projects</button>
+          <button class="filter-btn" data-filter="business" aria-pressed="false">Business Solutions</button>
+          <button class="filter-btn" data-filter="academic" aria-pressed="false">Academic &amp; Final Year</button>
+          <button class="filter-btn" data-filter="mobile" aria-pressed="false">Web &amp; Mobile Apps</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal stagger-1" data-category="business mobile">
+            <div class="project-media">
+              <img decoding="async" src="assets/images/project-business.webp"
+                   alt="Smart inventory dashboard on a laptop screen"
+                   width="600" height="375" loading="lazy" />
+              <span class="project-badge">Business Solution</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Smart Inventory &amp; ERP Platform</h3>
+              <p class="project-desc">Scalable business management platform with automated stock tracking, barcode scanning, and invoice generation.</p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li class="tech-tag">React</li>
+                <li class="tech-tag">Node.js</li>
+                <li class="tech-tag">MongoDB</li>
+                <li class="tech-tag">Tailwind</li>
+              </ul>
+              <div class="project-links">
+                <a href="#contact" class="project-demo-link">
+                  Request Demo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal stagger-2" data-category="academic">
+            <div class="project-media">
+              <img decoding="async" src="assets/images/project-academic.webp"
+                   alt="Students collaborating around laptops in a modern campus setting"
+                   width="600" height="375" loading="lazy" />
+              <span class="project-badge">Academic Project</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Campus Placement &amp; Major Portal</h3>
+              <p class="project-desc">IEEE-aligned university platform connecting students, recruiters, and academic evaluators for seamless placements.</p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li class="tech-tag">MERN Stack</li>
+                <li class="tech-tag">Express</li>
+                <li class="tech-tag">JWT</li>
+                <li class="tech-tag">Redux</li>
+              </ul>
+              <div class="project-links">
+                <a href="#contact" class="project-demo-link">
+                  View Documentation <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal stagger-3" data-category="business">
+            <div class="project-media">
+              <img decoding="async" src="assets/images/project-analytics.webp"
+                   alt="Analytics dashboard showing data charts and metrics"
+                   width="600" height="375" loading="lazy" />
+              <span class="project-badge">Enterprise SaaS</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Nexus Cloud Analytics Dashboard</h3>
+              <p class="project-desc">Real-time telemetrics platform with interactive dashboards, predictive trends, and automated PDF export reports.</p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li class="tech-tag">Next.js</li>
+                <li class="tech-tag">TypeScript</li>
+                <li class="tech-tag">Chart.js</li>
+                <li class="tech-tag">Firebase</li>
+              </ul>
+              <div class="project-links">
+                <a href="#contact" class="project-demo-link">
+                  Live Preview <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal stagger-1" data-category="mobile">
+            <div class="project-media">
+              <img decoding="async" src="assets/images/service-mobile.webp"
+                   alt="Food delivery mobile application on a smartphone"
+                   width="600" height="375" loading="lazy" />
+              <span class="project-badge">Mobile Application</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">SwiftFood Delivery &amp; Courier App</h3>
+              <p class="project-desc">Native-feel mobile application with live GPS tracking, multi-vendor cart management, and seamless payment integration.</p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li class="tech-tag">React Native</li>
+                <li class="tech-tag">Firebase</li>
+                <li class="tech-tag">Google Maps</li>
+              </ul>
+              <div class="project-links">
+                <a href="#contact" class="project-demo-link">
+                  Case Study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal stagger-2" data-category="academic">
+            <div class="project-media">
+              <img decoding="async" src="assets/images/service-web-dev.webp"
+                   alt="A code editor screen showing machine learning Python code"
+                   width="600" height="375" loading="lazy" />
+              <span class="project-badge">AI / Academic</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">AI-Powered Resume Evaluator</h3>
+              <p class="project-desc">NLP engine matching student resumes against job descriptions with similarity scoring and instant feedback reports.</p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li class="tech-tag">Python</li>
+                <li class="tech-tag">Flask</li>
+                <li class="tech-tag">React</li>
+                <li class="tech-tag">NLP</li>
+              </ul>
+              <div class="project-links">
+                <a href="#contact" class="project-demo-link">
+                  Source &amp; Demo <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal stagger-3" data-category="business mobile">
+            <div class="project-media">
+              <img decoding="async" src="assets/images/service-web-app.webp"
+                   alt="Financial dashboard with real-time market data charts"
+                   width="600" height="375" loading="lazy" />
+              <span class="project-badge">Web Application</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">FinPulse Financial Portfolio</h3>
+              <p class="project-desc">High-frequency market analysis dashboard with live WebSocket feeds, portfolio risk profiling, and trade alerts.</p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li class="tech-tag">JavaScript</li>
+                <li class="tech-tag">WebSockets</li>
+                <li class="tech-tag">CSS Grid</li>
+              </ul>
+              <div class="project-links">
+                <a href="#contact" class="project-demo-link">
+                  Live Preview <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider-beam" aria-hidden="true"></div>
+
+    <!-- ═══════════ TECH STACK ═══════════ -->
+    <section class="section tech-section" id="tech" aria-labelledby="tech-heading">
+      <div class="container">
+        <div class="reveal" style="text-align:center;">
+          <p class="section-tag">TECHNOLOGY ECOSYSTEM</p>
+          <h2 class="section-title" id="tech-heading">
+            Built With <span class="gradient-reality">Modern Technologies</span>
+          </h2>
+          <p class="section-subtitle" style="margin:0 auto;">
+            Industry-proven stack ensuring top security, high speed, and flawless cross-platform performance.
+          </p>
+        </div>
+
+        <ul class="tech-grid reveal" aria-label="Technologies we use">
+          <li class="tech-pill"><i class="fa-brands fa-html5" style="color:#e34f26;" aria-hidden="true"></i><span>HTML5</span></li>
+          <li class="tech-pill"><i class="fa-brands fa-css3-alt" style="color:#1572b6;" aria-hidden="true"></i><span>CSS3</span></li>
+          <li class="tech-pill"><i class="fa-brands fa-js" style="color:#f7df1e;" aria-hidden="true"></i><span>JavaScript ES6+</span></li>
+          <li class="tech-pill"><i class="fa-brands fa-react" style="color:#61dafb;" aria-hidden="true"></i><span>React.js</span></li>
+          <li class="tech-pill"><i class="fa-solid fa-bolt" style="color:#fff;" aria-hidden="true"></i><span>Next.js</span></li>
+          <li class="tech-pill"><i class="fa-brands fa-node" style="color:#68a063;" aria-hidden="true"></i><span>Node.js</span></li>
+          <li class="tech-pill"><i class="fa-solid fa-server" style="color:#818cf8;" aria-hidden="true"></i><span>Express.js</span></li>
+          <li class="tech-pill"><i class="fa-solid fa-fire" style="color:#f5820d;" aria-hidden="true"></i><span>Firebase</span></li>
+          <li class="tech-pill"><i class="fa-solid fa-database" style="color:#47a248;" aria-hidden="true"></i><span>MongoDB</span></li>
+          <li class="tech-pill"><i class="fa-brands fa-python" style="color:#3776ab;" aria-hidden="true"></i><span>Python</span></li>
+          <li class="tech-pill"><i class="fa-brands fa-android" style="color:#3ddc84;" aria-hidden="true"></i><span>Kotlin &amp; Android</span></li>
+          <li class="tech-pill"><i class="fa-brands fa-git-alt" style="color:#f05032;" aria-hidden="true"></i><span>Git &amp; GitHub</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="section-divider-beam" aria-hidden="true"></div>
+
+    <!-- ═══════════ WHY CHOOSE US ═══════════ -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="reveal" style="text-align:center;max-width:680px;margin:0 auto 3.5rem auto;">
+          <p class="section-tag">WHY CHOOSE US</p>
+          <h2 class="section-title" id="about-heading">
+            The Code Arcade <span class="gradient-reality">Advantage</span>
+          </h2>
+          <p class="section-subtitle" style="margin:0 auto;">
+            Technical mastery, transparent delivery, and relentless attention to visual excellence.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card reveal stagger-1">
+            <div class="why-number" aria-hidden="true">01</div>
+            <h3>Clean &amp; Maintainable Code</h3>
+            <p>Every line follows clean architecture principles, descriptive naming, and standard formatting for painless future expansion.</p>
+          </div>
+          <div class="why-card reveal stagger-2">
+            <div class="why-number" aria-hidden="true">02</div>
+            <h3>Real-World Practical Solutions</h3>
+            <p>We build battle-tested software addressing genuine operational bottlenecks — not theoretical abstractions.</p>
+          </div>
+          <div class="why-card reveal stagger-3">
+            <div class="why-number" aria-hidden="true">03</div>
+            <h3>Transparent &amp; Agile Process</h3>
+            <p>Frequent milestone demos, direct developer access, and full lifecycle visibility across every project stage.</p>
+          </div>
+          <div class="why-card reveal stagger-1">
+            <div class="why-number" aria-hidden="true">04</div>
+            <h3>Reliable Delivery Timelines</h3>
+            <p>We respect your deadlines — whether a fast-paced business launch or an urgent academic submission date.</p>
+          </div>
+          <div class="why-card reveal stagger-2">
+            <div class="why-number" aria-hidden="true">05</div>
+            <h3>Scalable Cloud Architecture</h3>
+            <p>Engineered to scale from your first 100 users to hundreds of thousands without performance degradation.</p>
+          </div>
+          <div class="why-card reveal stagger-3">
+            <div class="why-number" aria-hidden="true">06</div>
+            <h3>Dedicated Post-Launch Support</h3>
+            <p>Continuous bug fixes, updates, monitoring, and feature improvements keeping your software uninterrupted 24/7.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider-beam" aria-hidden="true"></div>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section class="section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-wrapper reveal">
+          <!-- Left Info Column -->
+          <div class="contact-info-col reveal-left">
+            <p class="section-tag">LET'S CONNECT</p>
+            <h2 class="section-title" id="contact-heading" style="font-size:2.4rem;">
+              Ready to Build Something <span class="gradient-reality">Extraordinary?</span>
+            </h2>
+            <p style="margin-bottom:2rem;">
+              Have a business app, mobile app, or academic project in mind? Reach out
+              directly or through our community channels.
+            </p>
+
+            <address class="contact-info-list" style="font-style:normal;">
+              <a href="mailto:codearcade20@gmail.com" class="contact-info-item">
+                <div class="contact-icon-box" aria-hidden="true">
+                  <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div>
+                  <p class="contact-info-label">Direct Email</p>
+                  <p class="contact-info-val">codearcade20@gmail.com</p>
+                </div>
+              </a>
+              <a href="https://sakthi21a34.github.io/portfolio2/" target="_blank"
+                 rel="noopener noreferrer" class="contact-info-item">
+                <div class="contact-icon-box" style="background:rgba(192,132,252,.12);border-color:rgba(192,132,252,.25);color:#c084fc;" aria-hidden="true">
+                  <i class="fa-solid fa-globe"></i>
+                </div>
+                <div>
+                  <p class="contact-info-label">Founder Portfolio</p>
+                  <p class="contact-info-val">sakthi21a34.github.io/portfolio2/</p>
+                </div>
+              </a>
+            </address>
+
+            <nav aria-label="Social media links">
+              <p class="contact-info-label" style="margin-bottom:.75rem;">Community &amp; Social</p>
+              <div class="social-links-bar">
+                <a href="https://chat.whatsapp.com/" target="_blank" rel="noopener noreferrer"
+                   class="social-circle-btn" aria-label="Join WhatsApp Community">
+                  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                </a>
+                <a href="https://t.me/codearcade" target="_blank" rel="noopener noreferrer"
+                   class="social-circle-btn" aria-label="Telegram Channel">
+                  <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com/codearcade" target="_blank" rel="noopener noreferrer"
+                   class="social-circle-btn" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/codearcade20" target="_blank" rel="noopener noreferrer"
+                   class="social-circle-btn" aria-label="GitHub">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://youtube.com/@codearcade" target="_blank" rel="noopener noreferrer"
+                   class="social-circle-btn" aria-label="YouTube">
+                  <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                </a>
+              </div>
+            </nav>
+          </div>
+
+          <!-- Right Form -->
+          <div class="reveal-right">
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="contact-name">Full Name</label>
+                  <input class="form-input" type="text" id="contact-name" name="name"
+                         placeholder="John Doe" autocomplete="name"
+                         data-label="Full name" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contact-email">Email Address</label>
+                  <input class="form-input" type="email" id="contact-email" name="email"
+                         placeholder="john@example.com" autocomplete="email"
+                         data-label="Email address" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="contact-service">Service</label>
+                  <select class="form-select" id="contact-service" name="service"
+                          data-label="Service" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="web-dev">Website Development</option>
+                    <option value="mobile-apps">Mobile Applications</option>
+                    <option value="web-apps">Custom Web Applications</option>
+                    <option value="academic">Academic / Final Year Projects</option>
+                    <option value="maintenance">Maintenance &amp; Support</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contact-budget">Budget Range</label>
+                  <select class="form-select" id="contact-budget" name="budget">
+                    <option value="flexible" selected>Flexible / Exploring</option>
+                    <option value="tier-1">₹10k – ₹35k (Mini / Student)</option>
+                    <option value="tier-2">₹35k – ₹1L (Standard Business)</option>
+                    <option value="tier-3">₹1L+ (Enterprise / Custom)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Project Description</label>
+                <textarea class="form-textarea" id="contact-message" name="message"
+                          placeholder="Tell us about your project — requirements, goals, or deadlines…"
+                          data-label="Project description" required></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit" id="contact-submit">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo" aria-label="Code Arcade Home">
+            <div class="brand-emblem" aria-hidden="true"><span>CA</span></div>
+            <span>CODE ARCADE</span>
+          </a>
+          <p>Turning Ideas Into Impact. High-performance web platforms, mobile software, and engineering solutions for students and growing businesses.</p>
+        </div>
+        <nav class="footer-col" aria-label="Footer navigation">
+          <h3>Navigation</h3>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Portfolio</a>
+            <a href="#tech">Tech Stack</a>
+            <a href="#about">About</a>
+          </div>
+        </nav>
+        <nav class="footer-col" aria-label="Footer services">
+          <h3>Services</h3>
+          <div class="footer-links">
+            <a href="#services">Website Development</a>
+            <a href="#services">Mobile Applications</a>
+            <a href="#services">Web Applications</a>
+            <a href="#services">Academic Projects</a>
+            <a href="#services">Maintenance &amp; Support</a>
+          </div>
+        </nav>
+        <address class="footer-col" style="font-style:normal;" aria-label="Footer contact">
+          <h3>Connect</h3>
+          <div class="footer-links">
+            <a href="mailto:codearcade20@gmail.com">codearcade20@gmail.com</a>
+            <a href="https://sakthi21a34.github.io/portfolio2/" target="_blank" rel="noopener noreferrer">Founder Portfolio</a>
+            <a href="#contact">Get a Quote</a>
+            <a href="#playground">Code Runner</a>
+          </div>
+        </address>
+      </div>
+
+      <div class="footer-bottom">
+        <p><small>&copy; <span id="footer-year">2025</span> Code Arcade. All rights reserved.</small></p>
+        <div style="display:flex;gap:1.5rem;">
+          <a href="privacy.html" style="color:var(--text-muted);">Privacy Policy</a>
+          <a href="terms.html" style="color:var(--text-muted);">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════
+       SCROLL TO TOP
+  ══════════════════════════════════════════ -->
+  <button id="scroll-to-top" aria-label="Scroll back to top" aria-hidden="true">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <!-- ══════════════════════════════════════════
+       CLIENT LOGIN MODAL
+  ══════════════════════════════════════════ -->
+  <div class="modal-overlay" id="login-modal" role="dialog"
+       aria-modal="true" aria-labelledby="login-modal-title" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="close-login-modal" aria-label="Close login dialog">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <div class="modal-header">
+        <div class="brand-emblem" style="margin:0 auto 1rem auto;width:44px;height:44px;" aria-hidden="true">
+          <span>CA</span>
+        </div>
+        <h2 id="login-modal-title">Client Portal</h2>
+        <p>Enter your email and we&rsquo;ll send a secure link to your project dashboard.</p>
+      </div>
+
+      <form id="client-login-form" novalidate>
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label class="form-label" for="login-email">Client Email</label>
+          <input class="form-input" type="email" id="login-email" name="email"
+                 placeholder="client@company.com" autocomplete="email"
+                 data-label="Email" required />
+        </div>
+        <button type="submit" class="btn-submit">
+          <span>Email Me Access Link</span>
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       GET A QUOTE MODAL
+  ══════════════════════════════════════════ -->
+  <div class="modal-overlay" id="quote-modal" role="dialog"
+       aria-modal="true" aria-labelledby="quote-modal-title" aria-hidden="true">
+    <div class="modal-card" style="max-width:540px;">
+      <button class="modal-close-btn" id="close-quote-modal" aria-label="Close quote dialog">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <div class="modal-header">
+        <p class="section-tag" style="margin-bottom:.5rem;justify-content:center;">QUICK ESTIMATE</p>
+        <h2 id="quote-modal-title">Get a Project Quote</h2>
+        <p>Tell us your requirements and we'll respond with a detailed scope estimate.</p>
+      </div>
+
+      <form id="quote-form" novalidate>
+        <div class="form-group" style="margin-bottom:1.25rem;">
+          <label class="form-label" for="quote-type">Project Type</label>
+          <select class="form-select" id="quote-type" name="type" required>
+            <option value="web-dev">Landing Page or Business Website</option>
+            <option value="saas">Full-Stack Web Application / SaaS</option>
+            <option value="mobile">Native / Cross-Platform Mobile App</option>
+            <option value="academic">College Final Year Major Project</option>
+          </select>
+        </div>
+        <div class="form-row" style="margin-bottom:1.25rem;">
+          <div class="form-group">
+            <label class="form-label" for="quote-timeline">Desired Timeline</label>
+            <select class="form-select" id="quote-timeline" name="timeline">
+              <option value="urgent">Express (&lt; 10 Days)</option>
+              <option value="standard" selected>Standard (2–4 Weeks)</option>
+              <option value="relaxed">Relaxed (&gt; 1 Month)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="quote-platform">Target Platform</label>
+            <select class="form-select" id="quote-platform" name="platform">
+              <option value="web">Web Browser</option>
+              <option value="mobile">iOS &amp; Android</option>
+              <option value="all">Full Cross-Platform</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label class="form-label" for="quote-email">Your Email</label>
+          <input class="form-input" type="email" id="quote-email" name="email"
+                 placeholder="you@domain.com" autocomplete="email"
+                 data-label="Email" required />
+        </div>
+        <button type="submit" class="btn-submit">
+          <span>Request Official Estimate</span>
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════ -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/enhance.js" defer></script>
+  <script src="js/playground.js" defer></script>
+</body>
+</html>
