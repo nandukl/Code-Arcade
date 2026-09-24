@@ -1,0 +1,133 @@
+/* ==========================================================================
+   CODE ARCADE - MOTION LAYER + ROBUSTNESS FIXES
+   Loaded after style/components/responsive so it can refine them safely.
+   Animations use transform/opacity only (GPU friendly).
+   ========================================================================== */
+
+:root { --ease-out: cubic-bezier(0.16, 1, 0.3, 1); }
+html { scroll-padding-top: calc(var(--header-height) + 12px); }
+
+/* ---------- 1. Never-blank safety net (no JS / script failure) ---------- */
+html:not(.js) #preloader,
+html.js-failed #preloader { display: none !important; }
+
+html:not(.js) .reveal, html:not(.js) .reveal-left,
+html:not(.js) .reveal-right, html:not(.js) .reveal-zoom,
+html.js-failed .reveal, html.js-failed .reveal-left,
+html.js-failed .reveal-right, html.js-failed .reveal-zoom {
+  opacity: 1 !important; transform: none !important;
+  filter: none !important; transition: none !important;
+}
+
+/* ---------- 2. Hero entrance choreography ---------- */
+@keyframes heroRise {
+  from { opacity: 0; transform: translateY(30px); filter: blur(8px); }
+  to   { opacity: 1; transform: translateY(0);    filter: blur(0); }
+}
+html.js:not(.is-ready):not(.js-failed) .hero-content > *,
+html.js:not(.is-ready):not(.js-failed) .hero-dock,
+html.js:not(.is-ready):not(.js-failed) .hero-glass-brand { opacity: 0; }
+
+html.is-ready .hero-content > * { animation: heroRise 0.95s var(--ease-out) both; }
+html.is-ready .hero-content > :nth-child(1) { animation-delay: 0.10s; }
+html.is-ready .hero-content > :nth-child(2) { animation-delay: 0.22s; }
+html.is-ready .hero-content > :nth-child(3) { animation-delay: 0.36s; }
+html.is-ready .hero-content > :nth-child(4) { animation-delay: 0.50s; }
+html.is-ready .hero-content > :nth-child(5) { animation-delay: 0.64s; }
+html.is-ready .hero-dock { animation: heroRise 1s var(--ease-out) 0.75s both; }
+html.is-ready .hero-glass-brand { animation: heroRise 1s var(--ease-out) 0.5s both, floatSubtle 6s ease-in-out 1.5s infinite alternate; }
+
+/* ---------- 3. Living gradient text ---------- */
+@keyframes gradientShift { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
+.gradient-reality {
+  background-size: 220% 220%;
+  animation: gradientShift 7s ease-in-out infinite alternate;
+}
+
+/* ---------- 4. Aurora orbs behind hero ---------- */
+.hero-overlay { overflow: hidden; }
+.hero-overlay::before, .hero-overlay::after {
+  content: ""; position: absolute; border-radius: 50%;
+  pointer-events: none; will-change: transform; filter: blur(80px);
+}
+.hero-overlay::before {
+  width: 46vmax; height: 46vmax; left: -14vmax; top: -12vmax;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.5), transparent 65%);
+  animation: orbA 19s ease-in-out infinite alternate;
+}
+.hero-overlay::after {
+  width: 38vmax; height: 38vmax; right: -10vmax; bottom: -14vmax;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.38), transparent 65%);
+  animation: orbB 23s ease-in-out infinite alternate;
+}
+@keyframes orbA { to { transform: translate(14vmax, 10vmax) scale(1.15); } }
+@keyframes orbB { to { transform: translate(-12vmax, -9vmax) scale(1.2); } }
+
+/* ---------- 5. Particle network canvas + hero parallax ---------- */
+.hero-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; opacity: 0.75; }
+.hero-bg { top: -10%; height: 120%; will-change: translate; }
+
+/* ---------- 6. Card tilt + glare, magnetic buttons ---------- */
+.tilt { position: relative; transform-style: preserve-3d; }
+.tilt-glare {
+  position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  opacity: 0; transition: opacity 0.3s ease; z-index: 3;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.10), transparent 45%);
+}
+.tilt:hover > .tilt-glare { opacity: 1; }
+
+/* ---------- 7. Gentle floating tech pills (uses `translate`, so hover lift still works) ---------- */
+@keyframes pillFloat { to { translate: 0 -6px; } }
+.tech-pill { animation: pillFloat 4.5s ease-in-out infinite alternate; }
+.tech-pill:nth-child(3n + 1) { animation-delay: 0s; }
+.tech-pill:nth-child(3n + 2) { animation-delay: -1.5s; }
+.tech-pill:nth-child(3n)     { animation-delay: -3s; }
+.tech-pill:hover { animation-play-state: paused; }
+
+/* ---------- 8. Terminal lines + spinner ---------- */
+@keyframes lineIn { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: none; } }
+.console-line { animation: lineIn 0.25s ease-out both; }
+.animate-spin { animation: spinAnim 0.8s linear infinite; }
+
+/* ---------- 9. Robustness fixes ---------- */
+/* Closed modals must not be tab-focusable or exposed to screen readers */
+.modal-overlay { visibility: hidden; overflow-y: auto; transition: opacity 0.3s ease, visibility 0s linear 0.3s; }
+.modal-overlay.active { visibility: visible; transition: opacity 0.3s ease, visibility 0s; }
+.modal-card { max-height: calc(100vh - 3rem); max-height: calc(100dvh - 3rem); overflow-y: auto; }
+#scroll-to-top:not(.visible) { visibility: hidden; }
+
+/* ---------- 10. Motion preferences ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .hero-canvas, .hero-overlay::before, .hero-overlay::after { display: none !important; }
+  .gradient-reality, .tech-pill, .hero-glass-brand { animation: none !important; }
+  .hero-bg { translate: none !important; }
+}
+@media (hover: none) { .tilt-glare { display: none; } }
+
+
+/* ==========================================================================
+   11. SCROLL PERFORMANCE
+   ========================================================================== */
+/* Fixed body backgrounds repaint the whole viewport on every scroll frame.
+   A position:fixed pseudo-element is promoted to its own GPU layer instead. */
+body { background-image: none; background-color: transparent; }
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.15), transparent),
+    radial-gradient(circle 600px at 10% 30%, rgba(56, 189, 248, 0.04), transparent),
+    radial-gradient(circle 600px at 90% 70%, rgba(168, 85, 247, 0.05), transparent);
+}
+/* Blur filters on ~40 revealing elements were the main paint cost */
+.reveal, .reveal-left, .reveal-right, .reveal-zoom { filter: none !important; will-change: auto; }
+/* Keep glass only where it is cheap and visible (navbar + hero dock) */
+.nav-links, .hero-glass-brand, .btn-secondary, .btn-login, .feature-box, .project-card,
+.project-badge, .tech-pill, .contact-wrapper { -webkit-backdrop-filter: none; backdrop-filter: none; }
+.hero-dock { -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+/* Big animated blurs are GPU-expensive; the gradients already fade to transparent */
+.hero-overlay::before, .hero-overlay::after { filter: none !important; }
+.ambient-glow-follower { display: none !important; }
+.tech-pill { animation: none; }
+/* Scroll progress: transform instead of width (no layout work) */
+.scroll-progress-bar { width: 100% !important; transform: scaleX(0); transform-origin: 0 50%; transition: none; will-change: transform; }
+.scroll-progress-bar::after { display: none; }

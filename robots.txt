@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# CSS, JS and images must stay crawlable so search engines can render the page.
+Sitemap: https://codearcade20.vercel.app/sitemap.xml
