@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found | Code Arcade</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Return to Code Arcade." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    body { display: flex; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 2rem; }
+    .error-page { max-width: 560px; }
+    .error-code { font-family: var(--font-mono); font-size: 8rem; font-weight: 900; line-height: 1; background: linear-gradient(135deg, #38bdf8, #a855f7, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
+    .error-title { font-family: var(--font-sans); font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 1rem; }
+    .error-subtitle { color: var(--text-secondary); margin-bottom: 2.5rem; font-size: 1.05rem; line-height: 1.65; }
+    .error-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .error-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%); pointer-events: none; filter: blur(60px); }
+  </style>
+</head>
+<body>
+  <div class="error-glow" aria-hidden="true"></div>
+  <div class="error-page">
+    <div class="error-code" aria-label="Error 404">404</div>
+    <h1 class="error-title">Page Not Found</h1>
+    <p class="error-subtitle">Looks like this page took a detour. The route you're looking for doesn't exist or may have been moved.</p>
+    <div class="error-actions">
+      <a href="/" class="btn-primary" style="display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 2rem;border-radius:9999px;font-weight:600;color:#fff;background:linear-gradient(135deg,#6366f1,#8b5cf6,#a855f7);box-shadow:0 10px 30px -5px rgba(124,58,237,.45);text-decoration:none;font-family:var(--font-sans);font-size:.95rem;">
+        ← Back to Home
+      </a>
+      <a href="mailto:codearcade20@gmail.com" class="btn-secondary" style="display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 2rem;border-radius:9999px;font-weight:600;color:#f8fafc;background:rgba(15,23,42,.7);border:1px solid rgba(255,255,255,.16);text-decoration:none;font-family:var(--font-sans);font-size:.95rem;">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</body>
+</html>
